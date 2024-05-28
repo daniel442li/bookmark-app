@@ -192,11 +192,9 @@ function renderSearch(searchType) {
               <div class="text-muted small">
                 <span class="text-primary">${hit.by}</span> | ${
                   hit.display_timestamp
-                } | <a class="text-decoration-none" href="https://news.ycombinator.com/item?id=${
-                  hit.id
-                }" target="_blank">link</a> | <a class="text-decoration-none"href="https://news.ycombinator.com/item?id=${
-                  hit.parent
-                }" target="_blank">parent</a>
+                } | <a class="text-decoration-none" href="${
+                  hit.link
+                }" target="_blank">link</a> 
               </div>
               <div class="mt-1" >
                 ${decodeHtml(hit._highlightResult.text.value || hit.value)}
@@ -208,6 +206,7 @@ function renderSearch(searchType) {
           "No comments found for <q>{{ query }}</q>. Try another search term.",
       },
       transformItems: (items) => {
+        console.log(items);
         return items.map((item) => {
           return {
             ...item,
@@ -221,9 +220,9 @@ function renderSearch(searchType) {
     }),
     refinementList({
       container: "#users-refinement-list",
-      attribute: "by",
+      attribute: "label",
       searchable: true,
-      searchablePlaceholder: "Search users",
+      searchablePlaceholder: "Search tags",
       showMore: true,
       cssClasses: {
         searchableInput: "form-control form-control-sm mb-2 border-light-2",

@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HN Comments Semantic Search</title>
+    <title>i forgort</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./src/scss/index.scss">
     <script type="module" src="./src/js/index.js"></script>
 
     <link rel="shortcut icon" href="./favicon.png">
     <meta name="description"
-          content="HN Comments Semantic Search with Typesense">
+          content="Daniel's bookmarks semantically embedded">
     <meta name="keywords"
-          content="search, semantic search, hybrid search, vector search, HN comments, search engine, typesense"/>
+          content="search, semantic search, hybrid search, vector search, bookmarks, search engine, typesense"/>
 
 </head>
 <body>
@@ -23,18 +23,18 @@
         <div class="py-3 px-4">
             <div class="row">
                 <div class="col-sm">
-                    <h1 class="h5 mb-3">Hacker News Comments - Hybrid Search</h1>
-                    <div>Keyword Search + Semantic Search + Filtering + Faceting</div>
-                    <div>Powered by <a href="https://typesense.org" target="_blank">Typesense</a></div>
-                    <div class="mt-3">
-                        <ul>
+                    <h1 class="h5 mb-3">My Bookmarks <3</h1>
+                    <div>I always forget my bookmarks so here they are with a semantic search feature</div>
+                    <!-- <div>Powered by <a href="https://typesense.org" target="_blank">Typesense</a></div> -->
+                    <div class="mt">
+                        <!-- <ul>
                             <li> This is a collection of 324K HN comments during the month of Oct 2022.</li>
                             <li>The data is indexed in Typesense using the new <a href="https://typesense.org/docs/0.25.0/api/vector-search.html#using-built-in-models" target="_blank">built-in embedding generation</a> (using S-BERT).</li>
                             <li>When a search query is typed in "Semantic Search" mode, Typesense automatically generates embeddings for the query using S-BERT, then does a nearest-neighbor search and returns the closest matches.</li>
                             <li>When a search query is typed in "Hybrid" mode, Typesense does both a regular keyword search and semantic search and combines the results using Rank Fusion.</li>
-                        </ul>
-                        <a href="https://github.com/typesense/showcase-hn-comments-semantic-search"
-                           target="_blank">View Source</a>
+                        </ul> -->
+                        <!-- <a href="https://github.com/typesense/showcase-hn-comments-semantic-search"
+                           target="_blank">View Source</a> -->
                     </div>
                 </div>
             </div>
@@ -47,9 +47,10 @@
                         <div class="col-sm-2 ps-sm-1 mt-2 mt-sm-0">
                             <select class="form-select" id="search-type-select"
                                     aria-label="Search Type">
-                                <option value="semantic" selected>Semantic Search</option>
+                                <option value="hybrid" selected>Hybrid Search</option>
+                                <option value="semantic">Semantic Search</option>
                                 <option value="keyword">Keyword Search</option>
-                                <option value="hybrid">Hybrid Search</option>
+                                
                             </select>
                         </div>
                     </div>
@@ -58,12 +59,10 @@
                         <div class="col-sm">
                             Try:
                             <span id="example-search-terms">
-                                  <a role="button" class="clickable-search-term">cinema</a>,
-                                  <a role="button" class="clickable-search-term">beethoven</a>,
-                                  <a role="button" class="clickable-search-term">napster</a>,
-                                  <a role="button" class="clickable-search-term">network congestion</a>,
-                                  <a role="button" class="clickable-search-term">high growth</a>,
-                                  <a role="button" class="clickable-search-term">ssl cipher</a>
+                                  <a role="button" class="clickable-search-term">chain of thought</a>,
+                                  <a role="button" class="clickable-search-term">linkedin outreach</a>,
+                                  <a role="button" class="clickable-search-term">vision model</a>,
+                                  <a role="button" class="clickable-search-term">mockup maker</a>,
                                 </span>
                         </div>
                         <div class="col-sm-4">

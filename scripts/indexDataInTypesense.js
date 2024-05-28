@@ -27,7 +27,7 @@ async function indexJSONL() {
       { name: "by", type: "string", facet: true },
       { name: "time", type: "int64" },
       { name: "text", type: "string" },
-      { name: "parent", type: "string", optional: true },
+      { name: "label", type: "string", facet: true},
       {
         name: "embedding",
         type: "float[]",
@@ -79,7 +79,7 @@ async function indexJSONL() {
 
   // read the JSONL file and parse it into batches
   // const jsonlFilePath = "data/hn-comments-oct-2022.jsonl";
-  const jsonlFilePath = "data/hn-comments-1000-sample.jsonl";
+  const jsonlFilePath = "data/rows.jsonl";
   const jsonlReadStream = fs.createReadStream(jsonlFilePath, {
     encoding: "utf8",
   });
